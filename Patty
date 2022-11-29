@@ -1,0 +1,26 @@
+def main (sugar):
+    print ('\n---------------------------------------------------------------')
+    print ("Regular Moderate Dose Insulin Sliding Scale Order")
+    print ("\nSuggested starting point for average patient")
+    print ('\n---------------------------------------------------------------')
+    print ("\nPlease enter your Blood Sugar(mg/dL) value from your glucometer")
+
+def blood_sugar (sugar):
+if sugar < 70:
+   print ("Inititate Hypoglycemia Protocol")
+elif sugar >=70 <= 130:
+   print ("Take 0 units")
+elif sugar >=131 <= 180:
+   print ("Take 2 units")
+elif sugar >=181 <= 240:
+   print ("Take 4 units")
+elif sugar >=241 <= 300:
+   print ("Take 6 units")
+elif sugar >=301 <= 350:
+   print ("Take 8 units")
+elif sugar >=351 <= 400:
+   print ("Take 10 units")
+elif sugar > 400:
+   print ("Take 12 units and CALL the doctor office for further instructions")
+else: 
+    print ("Please enter your current blood sugar level")
