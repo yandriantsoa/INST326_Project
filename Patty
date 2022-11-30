@@ -1,6 +1,6 @@
 def main()
     print ('\n---------------------------------------------------------------')
-    print ("Regular Moderate Dose Insulin Sliding Scale Order")
+    print ("Moderate Dose Insulin Sliding Scale")
     print ("\nSuggested starting point for average patient")
     print ('-----------------------------------------------------------------')
     sugar_level()
