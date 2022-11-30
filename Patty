@@ -6,6 +6,7 @@
     
 sugar_no = int(input("Please enter your Blood Sugar(mg/dL) value from your glucometer:\n"))
 
+def insulin_intake (sugar_no):
 if sugar_no < 70:
    print ("Inititate Hypoglycemia Protocol")
 elif sugar_no >=70 and sugar_no <= 130:
