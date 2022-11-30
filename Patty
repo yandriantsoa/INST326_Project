@@ -1,16 +1,20 @@
+# Insulin sliding scale application
+# Patricia, Michael, Yannrick, Kedrala
+
+''' defining main menu of app'''
 def main()
     print ('\n---------------------------------------------------------------')
     print ("Moderate Dose Insulin Sliding Scale")
     print ("\nSuggested starting point for average patient")
     print ('-----------------------------------------------------------------')
-    sugar_level()
-    insulin_intake(sugar_level)
+   
     
-
+''' defining insulin intake in units according to user's input'''
 def insulin_intake(sugar_no):    
+    ''' ask user to input blood sugar value'''
     sugar_no = int(input("Please enter your Blood Sugar(mg/dL) value from your glucometer:\n"))
     return sugar_no
-
+'''declaring the conditions'''
 if sugar_no < 70:
    print ("Inititate Hypoglycemia Protocol")
 elif sugar_no >=70 and sugar_no <= 130:
