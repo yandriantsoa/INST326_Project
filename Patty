@@ -2,17 +2,15 @@ def main()
     print ('\n---------------------------------------------------------------')
     print ("Regular Moderate Dose Insulin Sliding Scale Order")
     print ("\nSuggested starting point for average patient")
-    print ('\n---------------------------------------------------------------')
+    print ('-----------------------------------------------------------------')
     sugar_level()
     insulin_intake(sugar_level)
     
 
-
-def sugar_level():    
+def insulin_intake(sugar_no):    
     sugar_no = int(input("Please enter your Blood Sugar(mg/dL) value from your glucometer:\n"))
     return sugar_no
 
-def insulin_intake (sugar_no):
 if sugar_no < 70:
    print ("Inititate Hypoglycemia Protocol")
 elif sugar_no >=70 and sugar_no <= 130:
