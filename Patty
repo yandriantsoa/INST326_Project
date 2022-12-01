@@ -1,39 +1,30 @@
-def main (sugar):
+# Insulin sliding scale application
+# Patricia, Michael, Yannrick, Kedrala
+
+''' defining main menu of app'''
+def main()
     print ('\n---------------------------------------------------------------')
-    print ("Regular Moderate Dose Insulin Sliding Scale Order")
+    print ("Moderate Dose Insulin Sliding Scale")
     print ("\nSuggested starting point for average patient")
     print ('\n---------------------------------------------------------------')
-    'print ("\nPlease enter your Blood Sugar(mg/dL) value from your glucometer")'
-    #replaced this line with the interface function - Yannrick
-    sugar_level()
-    blood_sugar(sugar_level)
-    
-    
-def sugar_level(): 
-   sugar_level = input("\nPlease enter your Blood Sugar(mg/dL) value from your glucometer:")
-   return sugar_level
-   
+    print ("\nPlease enter your Blood Sugar(mg/dL) value from your glucometer")
+
 def blood_sugar (sugar):
-   if sugar < 70:
-      print ("Inititate Hypoglycemia Protocol")
-   elif sugar >=70 <= 130:
-      print ("Take 0 units")
-   elif sugar >=131 <= 180:
-      print ("Take 2 units")
-   elif sugar >=181 <= 240:
-      print ("Take 4 units")
-   elif sugar >=241 <= 300:
-      print ("Take 6 units")
-   elif sugar >=301 <= 350:
-      print ("Take 8 units")
-   elif sugar >=351 <= 400:
-      print ("Take 10 units")
-   elif sugar > 400:
-      print ("Take 12 units and CALL the doctor office for further instructions")
-   else: 
-       print ("Please enter your current blood sugar level")
-
-#Changed the indentation of the if statement -Yannrick
-
-
-   
+if sugar < 70:
+   print ("Inititate Hypoglycemia Protocol")
+elif sugar >=70 <= 130:
+   print ("Take 0 units")
+elif sugar >=131 <= 180:
+   print ("Take 2 units")
+elif sugar >=181 <= 240:
+   print ("Take 4 units")
+elif sugar >=241 <= 300:
+   print ("Take 6 units")
+elif sugar >=301 <= 350:
+   print ("Take 8 units")
+elif sugar >=351 <= 400:
+   print ("Take 10 units")
+elif sugar > 400:
+   print ("Take 12 units and CALL the doctor office for further instructions")
+else: 
+    print ("Please enter your current blood sugar level")
