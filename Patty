@@ -5,7 +5,7 @@ Due Date: December 12, 2022
 Challenges Encountered: Building an insulin sliding scale application'''
 
 class Insulin:
-    def __init__ (self, sugar_no):
+    def __init__ (self, sugar_no, name):
         self.name = name
         self.sugar_no = sugar_no
 
@@ -20,8 +20,7 @@ def main():
     print ("Moderate Dose Insulin Sliding Scale")
     print ("\nSuggested starting point for average patient")
     print ('-----------------------------------------------------------------')
-    sugar_level()
-    insulin_intake(sugar_level)
+    insulin_intake()
 
 ''' defining insulin intake in units according to user's input'''
 def insulin_intake(sugar_no):    
