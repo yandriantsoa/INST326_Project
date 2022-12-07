@@ -1,5 +1,18 @@
-# Insulin sliding scale application
-# Patricia, Michael, Yannrick, Kedrala
+''' Group Members: Patricia, Michael, Yannrick, and Kedrala
+Assignment: Final Class Project 
+Due Date: December 12, 2022
+
+Challenges Encountered: Building an insulin sliding scale application'''
+
+class Insulin:
+    def __init__ (self, sugar_no):
+        self.name = name
+        self.sugar_no = sugar_no
+
+
+
+
+
 
 ''' defining main menu of app'''
 def main():
@@ -35,3 +48,6 @@ elif sugar_no > 400:
    print ("Take 12 units and CALL the doctor office for further instructions.")
 else: 
     print ("Please try again. Enter your current blood sugar level.")
+    
+    
+if__name__ == "__main__":
