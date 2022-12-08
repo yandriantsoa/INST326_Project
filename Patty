@@ -4,14 +4,10 @@ Due Date: December 12, 2022
 
 Challenges Encountered: Building an insulin sliding scale application'''
 
+''' defining the a class insulin with sugar_no as an attribute'''
 class Insulin:
-    def __init__ (self, sugar_no, name):
-        self.name = name
+    def __init__ (self, sugar_no):
         self.sugar_no = sugar_no
-
-
-
-
 
 
 ''' defining main menu of app'''
