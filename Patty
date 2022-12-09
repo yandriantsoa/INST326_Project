@@ -37,7 +37,7 @@ class Sugar:
         return self._level
           
     @sugar_level.setter
-    def fruit_level(self,value):
+    def sugar_level(self,value):
         print(f'Sugar level is now {value}')
         self._level = value
         
