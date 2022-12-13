@@ -58,3 +58,104 @@ def main():
 if __name__== '__main__':
     sugar = Sugar(130)
     print(f'The sugar level is {sugar.sugar_level}')
+    
+ 
+ 
+ 
+ 
+ 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' 
+ 
+    ''' 
+    Project Idea: Develop a terminal Application where user can input blood sugar level and accordingly get a valid insulin dosage
+    Language: Python
+'''
+# importing libraries
+import sys # to get the max int possible
+
+        
+class Person:
+    """This class represents a unique person using the app"""
+    def __init__(self):
+        """class initiation code with name, age inputs and initializong history
+        """
+        self.name = input("Please Enter your first name: ")
+        self.age = int(input("Please Enter your age in years: "))
+        self.insulin_intake_history = [] # to store the patients blood sugar level history with recommended insulin dosage
+        
+
+class App:
+    """This class represents the Insulin dosage recommending Application"""
+    def __init__(self, preset_insulin_dosage_chart):
+        """Class is initialised with the recommended preset insulin dosage chart given by the doctor
+
+        Args:
+            preset_insulin_dosage_chart (dict): This contains the recommended preset blood sugar values and their respective dosages approved by the patients' doctor
+        """
+        self.preset_insulin_dosage_chart = preset_insulin_dosage_chart
+    
+    def dosage_calculate(self, person: Person):
+        """This method calculates the dosage according to the patient's blood sugar level using the preset insulin dosage chart'
+
+        Args:
+            person (Person): Person instance which initiated this method
+        """
+        print(f"Hello {person.name}") # greeting for the patient
+        flag = 0    # to break the loop below when the patient enters valid blood sugar level
+        
+        while not flag:
+            try:
+                user_blood_sugar_level = int(input("Please enter your Blood Sugar(mg/dL) value from your glucometer: "))
+                flag = 1
+            except ValueError as e:
+                print("Please enter a valid Blood Sugar Level(mg/dL)")
+        # following loop checks for the correct range and recommends the right dosage
+        for key, value in self.preset_insulin_dosage_chart.items():
+            if user_blood_sugar_level <= key:
+                person.insulin_intake_history.append((user_blood_sugar_level, value)) # add new record to the relevent patient's history
+                print(f"Your blood sugar level is {user_blood_sugar_level}, recommended_dosage: {value}.")
+                print("Thank you for using the App!")
+                break
+            
+        
+
+def main():
+    recommended_insulin_dosage_chart_from_doctor = {
+        69 : "Inititate Hypoglycemia Protocol",
+        130 : "Take 0 units",
+        180 : "Take 2 units",
+        240 : "Take 4 units",
+        300 : "Take 6 units",
+        350 : "Take 8 units",
+        400 : "Take 10 units",
+        sys.maxsize : "Take 12 units and CALL the doctor office for further instructions"
+    }
+    
+    started_App_Instance = App(recommended_insulin_dosage_chart_from_doctor)
+    
+    # testing with Person instances
+    person_1 = Person()
+    started_App_Instance.dosage_calculate(person_1)
+    print("")
+    
+    person_2 = Person()
+    started_App_Instance.dosage_calculate(person_2)
+    print("")
+    
+    # using the same person instances
+    started_App_Instance.dosage_calculate(person_1)
+    print("")
+    started_App_Instance.dosage_calculate(person_2)
+    print("")
+    
+    # printing recorded histories of initiated patients
+    print(person_1.insulin_intake_history)
+    print("")
+    print(person_2.insulin_intake_history)
+    print("")
+    
+    
+if __name__ == "__main__":
+    """This is the driver code for the project"""
+    # initiate project main code
+    main()
